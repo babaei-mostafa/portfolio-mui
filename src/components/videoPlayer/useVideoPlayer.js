@@ -37,14 +37,37 @@ const useVideoPlayer = (videoElement) => {
     // setPlayerState({ ...playerState });
   };
 
+  // const handleVideoProgress = (event) => {
+  //   const manualChange = Number(event.target.value);
+  //   videoElement.current.currentTime =
+  //     (videoElement.current.duration / 100) * manualChange;
+  //   setPlayerState({
+  //     ...playerState,
+  //     progress: manualChange,
+  //   });
+  // };
+
   const handleVideoProgress = (event) => {
     const manualChange = Number(event.target.value);
-    videoElement.current.currentTime =
-      (videoElement.current.duration / 100) * manualChange;
-    setPlayerState({
-      ...playerState,
-      progress: manualChange,
-    });
+
+    if (
+      (videoElement.current.duration / 100) * manualChange >
+      videoElement.current.currentTime
+    ) {
+      // videoElement.current.currentTime =
+      //   (videoElement.current.duration / 100) * manualChange;
+      setPlayerState({
+        ...playerState,
+        progress: manualChange,
+      });
+    } else {
+      videoElement.current.currentTime =
+        (videoElement.current.duration / 100) * manualChange;
+      setPlayerState({
+        ...playerState,
+        progress: manualChange,
+      });
+    }
   };
 
   const handleVideoSpeed = (event) => {
