@@ -28,13 +28,14 @@ export const ExperienceTimeline = () => {
     <Timeline position="right" sx={{ direction: "ltr" }}>
       {devExp.map((exp, index) => (
         <Slide
+          key={index}
           direction="up"
           in={loading}
           style={{
             transitionDelay: loading ? `${index + 3}99ms` : "0ms",
           }}
         >
-          <TimelineItem key={index}>
+          <TimelineItem>
             <TimelineSeparator>
               <TimelineDot color="info" variant="outlined">
                 <HomeRepairServiceRounded color="info" />

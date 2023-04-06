@@ -29,6 +29,11 @@ const AppContainer = () => {
 
   // codes for Tabs
   const [pageNumber, setPageNumber] = useState(0);
+
+  const handlePageChange = (index) => {
+    setPageNumber(index);
+  };
+
   const handlePageNumber = (event, newPage) => {
     setPageNumber(newPage);
   };
@@ -57,7 +62,7 @@ const AppContainer = () => {
           </SidebarContainer>
           <DrawerActionButton />
           <PagesContainer>
-            <SwipeableViews index={pageNumber} onChangeIndex={handlePageNumber}>
+            <SwipeableViews index={pageNumber} onChangeIndex={handlePageChange}>
               <Page index={0}>
                 <Home helmetTitle="وب‌سایت شخصی | صفحه اصلی" />
               </Page>
