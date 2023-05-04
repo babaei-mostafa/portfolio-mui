@@ -1,3 +1,4 @@
+import { createRef, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
   Face6Rounded,
@@ -18,7 +19,8 @@ import { contactValidationSchema } from "../../validations/contactValidationSche
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
 export const ContactForm = () => {
-    const theme = useTheme();
+  const theme = useTheme();
+  const recaptchaRef = useRef()
     
       const formik = useFormik({
         initialValues: {
@@ -137,6 +139,7 @@ export const ContactForm = () => {
         }}
       >
         <ReCAPTCHA
+          ref={recaptchaRef}
           sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
           theme={theme.palette.mode}
           hl="fa"

@@ -1,0 +1,10 @@
+export { default as Cosmetics } from "./cosmetics-project.jpg";
+export { default as FoodApp } from "./food-app-project.jpg";
+export { default as ContactApp } from "./contacts-project.jpg";
+export { default as PortfolioEn } from "./portfilio-project.jpg";
+export { default as PortfolioFa } from "./portfolio-fa.jpg";
+export { default as Realestate } from "./realestate-project.jpg";
+export { default as TravelApp } from "./travel-app-project.jpg";
+export { default as ChatApp } from "./chat-app.jpg";
+export { default as Weblog } from "./weblog-project.jpg";
+export { default as Crypto } from "./crypto-project.jpg";

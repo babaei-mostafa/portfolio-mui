@@ -6,7 +6,7 @@ import { Page } from "../components/pages";
 import { MainContext } from "../context/MainContext";
 import { SidebarContainer } from "./SidebarContainer";
 import { DrawerActionButton } from "../components/drawer";
-import { About, Contact, Home } from "../pages";
+import { About, Contact, Home, Works } from "../pages";
 import SwipeableViews from "react-swipeable-views";
 
 const AppContainer = () => {
@@ -70,12 +70,10 @@ const AppContainer = () => {
                 <About helmetTitle="وب‌سایت شخصی | درباره من" />
               </Page>
 
-              {/* <Page index={2}>
-                <Typography variant="h5" sx={{ textAlign: "center" }}>
-                  نمونه کارهای من
-                </Typography>
-              </Page> */}
               <Page index={2}>
+                <Works helmetTitle="وب‌سایت شخصی | نمونه کارهای من" />
+              </Page>
+              <Page index={3}>
                 <Contact helmetTitle="وب‌سایت شخصی | تماس با من" />
               </Page>
             </SwipeableViews>
